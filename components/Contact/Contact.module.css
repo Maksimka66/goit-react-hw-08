@@ -1,0 +1,30 @@
+.listItem {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.userInfo {
+  color: #000000;
+  font-size: 32px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.deleteBtn {
+  background-color: #d3d3d3;
+  font-size: 32px;
+  padding: 8px 16px;
+  border: 2px solid #000000;
+}
