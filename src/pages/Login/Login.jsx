@@ -1,11 +1,11 @@
-import DocumentTitle from "../../components/DocumentTitle.jsx";
-import { LoginForm } from "../../components/LoginForm/LoginForm.jsx";
+import { useSelector } from "react-redux";
+import { selectLoader } from "../../redux/auth/selectors";
+import LoginForm from "../../components/LoginForm/LoginForm";
+import Loader from "../../components/Loader/Loader";
 
-export default function Login() {
-  return (
-    <div>
-      <DocumentTitle>Login</DocumentTitle>
-      <LoginForm />
-    </div>
-  );
-}
+const Login = () => {
+  const loader = useSelector(selectLoader);
+  return <div>{loader ? <Loader /> : <LoginForm />}</div>;
+};
+
+export default Login;

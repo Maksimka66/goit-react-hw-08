@@ -1,32 +1,11 @@
-import DocumentTitle from "../../components/DocumentTitle.jsx";
+import { useSelector } from "react-redux";
+import { selectIsLoggedIn } from "../../redux/auth/selectors";
 
-const styles = {
-  container: {
-    minHeight: "calc(100vh - 50px)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: "center",
-  },
+import css from "./Home.module.css";
+
+const Home = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  return <div>{!isLoggedIn && <p>Register to use the phonebook.</p>}</div>;
 };
 
-export default function Home() {
-  return (
-    <>
-      <DocumentTitle>Home</DocumentTitle>
-
-      <div style={styles.container}>
-        <h1 style={styles.title}>
-          Task manager welcome page{" "}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h1>
-      </div>
-    </>
-  );
-}
+export default Home;
