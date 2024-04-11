@@ -1,4 +1,4 @@
-import DocumentTitle from "../components/DocumentTitle.jsx";
+import DocumentTitle from "../../components/DocumentTitle.jsx";
 
 const styles = {
   container: {

@@ -1,4 +1,4 @@
-import DocumentTitle from "../components/DocumentTitle.jsx";
+import DocumentTitle from "../../components/DocumentTitle.jsx";
 import { RegisterForm } from "../components/RegisterForm/RegisterForm";
 
 export default function Register() {
