@@ -1,5 +1,6 @@
-import { deleteContact } from "../../redux/contactsOps";
+import { deleteContact } from "../../redux/contacts/operations";
 import { useDispatch } from "react-redux";
+import toast from "react-hot-toast";
 
 import styles from "./Contact.module.css";
 
@@ -14,7 +15,10 @@ const Contact = ({ user: { name, number, id } }) => {
       </div>
       <button
         className={styles.deleteBtn}
-        onClick={() => dispatch(deleteContact(id))}
+        onClick={() => {
+          dispatch(deleteContact(id));
+          toast.success("This contact has been deleted!");
+        }}
       >
         Delete
       </button>

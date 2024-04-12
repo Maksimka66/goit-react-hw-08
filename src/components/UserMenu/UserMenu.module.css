@@ -1,0 +1,20 @@
+.welcomeContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logoutBtn {
+  background-color: #cf1932;
+  display: flex;
+  color: rgb(213, 243, 43);
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcomeText {
+  font-size: 24px;
+  padding: 8px 16px;
+  color: #000000;
+}

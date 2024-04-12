@@ -1,0 +1,7 @@
+.listLink {
+  display: flex;
+  gap: 16px;
+}
+
+.active {
+}

@@ -1,11 +1,11 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
-
+import { addContact } from "../../redux/contacts/operations.js";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
+import toast from "react-hot-toast";
 
 import styles from "./ContactForm.module.css";
-import { addContact } from "../../redux/contactsOps";
 
 const ContactForm = () => {
   const initialValues = {
@@ -35,7 +35,7 @@ const ContactForm = () => {
     };
 
     dispatch(addContact(userInfo));
-
+    toast.success("This contact has been added!");
     actions.resetForm();
   };
 
@@ -46,7 +46,7 @@ const ContactForm = () => {
       validationSchema={userForm}
     >
       <Form className={styles.submitForm}>
-        <div className={styles.formContainer}>
+        <div className={styles.formContactContainer}>
           <label className={styles.fieldDescription} htmlFor={nameId}>
             Name
           </label>
@@ -59,7 +59,7 @@ const ContactForm = () => {
           <ErrorMessage className={styles.errorItem} name="name" as="span" />
         </div>
 
-        <div className={styles.formContainer}>
+        <div className={styles.formContactContainer}>
           <label className={styles.fieldDescription} htmlFor={numberId}>
             Number
           </label>
@@ -72,7 +72,7 @@ const ContactForm = () => {
           <ErrorMessage className={styles.errorItem} name="number" as="span" />
         </div>
 
-        <button className={styles.submitBtn} type="submit">
+        <button className={styles.submitContactBtn} type="submit">
           Add contact
         </button>
       </Form>
