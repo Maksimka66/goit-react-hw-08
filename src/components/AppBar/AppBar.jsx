@@ -8,11 +8,10 @@ import css from "./AppBar.module.css";
 const AppBar = () => {
   const isLogin = useSelector(selectIsLoggedIn);
   return (
-    <div className={css.nav}>
+    <header className={css.header}>
       <Navigation />
-      <h1 className={css.title}>My Phonebook</h1>
       {isLogin ? <UserMenu /> : <RegistrationMenu />}
-    </div>
+    </header>
   );
 };
 

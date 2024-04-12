@@ -1,0 +1,35 @@
+.registrationForm {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fieldDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 24px;
+  color: green;
+}
+
+.formItem {
+  display: block;
+  width: 100%;
+  height: 26px;
+  border-radius: 6px;
+  border: 1px solid blue;
+}
+
+.formItem:hover {
+  border-color: #17ee3b;
+}
+
+.submitBtn {
+  background-color: #5c154d;
+  color: aquamarine;
+}
+
+.submitBtn:hover {
+  background-color: #177ea7;
+}

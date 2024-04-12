@@ -5,7 +5,13 @@ import css from "./Home.module.css";
 
 const Home = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  return <div>{!isLoggedIn && <p>Register to use the phonebook.</p>}</div>;
+  return (
+    <div className={css.container}>
+      {!isLoggedIn && (
+        <h1 className={css.title}>Register to use the phonebook</h1>
+      )}
+    </div>
+  );
 };
 
 export default Home;
