@@ -1,6 +1,6 @@
 import { useId } from "react";
 import { useDispatch } from "react-redux";
-import { register } from "../../redux/auth/operations";
+import { login } from "../../redux/auth/operations";
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import toast from "react-hot-toast";
 import * as Yup from "yup";
@@ -24,7 +24,7 @@ const LoginForm = () => {
       email: values.email,
       password: values.password,
     };
-    dispatch(register(registeredUser))
+    dispatch(login(registeredUser))
       .then(() => {
         toast.success("Login successful!");
       })
