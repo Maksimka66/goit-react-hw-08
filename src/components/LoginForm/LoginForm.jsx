@@ -24,14 +24,7 @@ const LoginForm = () => {
       email: values.email,
       password: values.password,
     };
-    dispatch(login(registeredUser))
-      .then(() => {
-        toast.success("Login successful!");
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.error("Login unsuccessful!");
-      });
+    dispatch(login(registeredUser));
 
     actions.resetForm();
   };

@@ -5,8 +5,6 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 import Loader from "../../components/Loader/Loader";
 import { selectLoader } from "../../redux/auth/selectors";
 
-import css from "./Contacts.module.css";
-
 const Contacts = () => {
   const load = useSelector(selectLoader);
 

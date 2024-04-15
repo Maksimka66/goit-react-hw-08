@@ -26,13 +26,7 @@ const RegistrationForm = () => {
       email: values.email,
       password: values.password,
     };
-    dispatch(register(user))
-      .then(() => {
-        toast.success("Registration successful!");
-      })
-      .catch((err) => {
-        toast.error(err.message);
-      });
+    dispatch(register(user));
 
     actions.resetForm();
   };
