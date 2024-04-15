@@ -12,13 +12,6 @@ import css from "./Contacts.module.css";
 const Contacts = () => {
   const load = useSelector(selectLoader);
 
-  useEffect(() => {
-    const isAuthenticated = localStorage.getItem("isAuthenticated");
-    if (!isAuthenticated) {
-      toast.error("This user isn`t authorized!");
-    }
-  }, []);
-
   return (
     <div>
       <ContactForm />
