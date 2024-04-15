@@ -35,7 +35,6 @@ const ContactForm = () => {
     };
 
     dispatch(addContact(userInfo));
-    toast.success("This contact has been added!");
     actions.resetForm();
   };
 

@@ -35,6 +35,7 @@ export const login = createAsyncThunk(
       toast.success("Login successful!");
       return response.data;
     } catch (error) {
+      toast.error("Your enter wrong email or password! Please try again.");
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -44,6 +45,7 @@ export const logout = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
   try {
     await axios.post("/users/logout");
     clearAuthHeader();
+    toast.success("Logout successful!");
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
