@@ -13,7 +13,7 @@ export const selectFilteredContacts = createSelector(
         ? contacts.filter(
             (contact) =>
               contact.name.toLowerCase().includes(filter.toLowerCase()) ||
-              contact.number.includes(filter.trim())
+              contact.number.includes(filter)
           )
         : [];
     }
