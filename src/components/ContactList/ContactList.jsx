@@ -4,6 +4,7 @@ import Contact from "../Contact/Contact";
 import { selectFilteredContacts } from "../../redux/contacts/selectors";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import { fetchContacts } from "../../redux/contacts/operations";
+
 import styles from "./ContactList.module.css";
 
 const ContactList = () => {
